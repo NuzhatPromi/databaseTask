@@ -105,7 +105,7 @@ public class DBOperation {
 		ResultSet rs = stmt.executeQuery();
 		while (rs.next()) {
 			String strName = rs.getString(1);
-			BigDecimal assets = rs.getBigDecimal(3);
+			BigDecimal assets = rs.getBigDecimal(2);
 			if (strName != null && assets.compareTo(BigDecimal.ZERO) != 0) {
 				return true;
 			}
